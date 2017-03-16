@@ -1,5 +1,4 @@
 #include <iostream>
-#include "CCircBuffer.h"
 #include "CPlot2D.h"
 
 #include <math.h>
