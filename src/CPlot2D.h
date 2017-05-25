@@ -5,7 +5,7 @@
 #include <vector>
 
 /**
- * gnuplot .cpp front-end class
+ * gnuplot .cpp front-end class.
  */
 class CPlot2D
 {

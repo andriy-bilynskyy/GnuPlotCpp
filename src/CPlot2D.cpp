@@ -89,7 +89,7 @@ void CPlot2D::setYlable(const char * label)
 }
 
 /**
- * Check if gnuplot is available in the  system
+ * Check if gnuplot is available in the  system.
  * @return true if available otherwise false
  */
 bool CPlot2D::checkGNUPLOT()
@@ -105,7 +105,7 @@ bool CPlot2D::checkGNUPLOT()
 }
 
 /**
- * Draw plot window
+ * Draw plot window.
  */
 void CPlot2D::draw()
 {
