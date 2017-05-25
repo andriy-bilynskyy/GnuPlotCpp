@@ -4,6 +4,9 @@
 #include <stdint.h>
 #include <vector>
 
+/**
+ * gnuplot .cpp front-end class
+ */
 class CPlot2D
 {
 public:
@@ -15,8 +18,8 @@ public:
     void resetPlot();
     void setColor(uint32_t rrggbb);
     void setTitle(const char * title);
-    void setXlable(const char * title);
-    void setYlable(const char * title);
+    void setXlable(const char * label);
+    void setYlable(const char * label);
     static bool checkGNUPLOT();
     void draw();
 
@@ -33,8 +36,8 @@ private:
     std::vector<Point2D_t>         m_data;
     uint32_t                       m_color;
     const char                   * m_title;
-    const char                   * m_xlable;
-    const char                   * m_ylable;
+    const char                   * m_xlabel;
+    const char                   * m_ylabel;
     static const char            * m_gnuplotPipe;
 
     CPlot2D(const CPlot2D &);
