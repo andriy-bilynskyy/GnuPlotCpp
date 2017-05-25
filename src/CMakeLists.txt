@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 2.8)
+project(gnuplotcpp_lib)
+set(SOURCE_LIB CPlot2D.cpp)
+add_library(gnuplotcpp STATIC ${SOURCE_LIB})
+configure_file(${CMAKE_CURRENT_SOURCE_DIR}/CPlot2D.h ${CMAKE_CURRENT_BINARY_DIR} COPYONLY)

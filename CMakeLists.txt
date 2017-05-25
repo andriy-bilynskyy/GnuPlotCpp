@@ -1,0 +1,8 @@
+cmake_minimum_required(VERSION 2.8)
+project(GnuPlotCpp)
+find_program(GPLOT gnuplot)
+if(NOT GPLOT)
+    message(FATAL_ERROR "GNU PLOT not found! Please install the package")
+endif()
+add_subdirectory(src)
+add_subdirectory(test)

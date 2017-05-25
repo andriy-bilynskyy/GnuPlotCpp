@@ -41,4 +41,4 @@ private:
     CPlot2D & operator=(const CPlot2D &);
 };
 
-#endif /* CPLOT2D_H_ */
+#endif

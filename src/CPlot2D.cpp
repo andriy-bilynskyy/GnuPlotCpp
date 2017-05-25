@@ -3,7 +3,8 @@
 
 const char * CPlot2D::m_gnuplotPipe = "gnuplot -persist";
 
-CPlot2D::CPlot2D() : m_data(), m_color(0), m_title("plot"), m_xlable("x"), m_ylable("y")
+CPlot2D::CPlot2D() : m_data(), m_color(0),
+                     m_title("plot"), m_xlable("x"), m_ylable("y")
 {
 }
 
@@ -68,10 +69,14 @@ void CPlot2D::draw()
     FILE *gp = popen(m_gnuplotPipe, "w");
     if(gp)
     {
-        fprintf(gp, "set term wxt title '%s'\n", m_title);
-        fprintf(gp, "set xlabel '%s'\n set ylabel '%s'\n", m_xlable, m_ylable);
-        fprintf(gp, "plot '-' lc rgb '#%06X' with lines title '%s'\n", m_color, m_title);
-        for(std::vector<Point2D_t>::iterator it = m_data.begin(); it != m_data.end(); ++it)
+        fprintf(gp,
+           "set term wxt title '%s'\n", m_title);
+        fprintf(gp,
+           "set xlabel '%s'\n set ylabel '%s'\n", m_xlable, m_ylable);
+        fprintf(gp,
+           "plot '-' lc rgb '#%06X' with lines title '%s'\n", m_color, m_title);
+        for(std::vector<Point2D_t>::iterator it =
+                                       m_data.begin(); it != m_data.end(); ++it)
         {
             fprintf(gp, "%g %g\n", (double)(it->x), (double)(it->y));
         }
